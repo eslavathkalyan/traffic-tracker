@@ -2,12 +2,12 @@ FROM node:20
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY backend/package*.json ./
 
 RUN npm install
 
-COPY . .
+COPY backend .
 
-EXPOSE 5173
+EXPOSE 5000
 
-CMD ["npm", "run", "dev"]
+CMD ["npm", "start"]
